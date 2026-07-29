@@ -1,0 +1,17 @@
+# Maven compiled output
+target/
+*.jar
+
+# IDE folders (if you use VS Code or IntelliJ)
+.vscode/
+.idea/
+*.iml
+
+# Swiss Ephemeris massive data files (keep these local)
+ephe/
+
+# Derby database temporary lock files
+geo/*.lck
+
+# Derby log file
+derby.log
