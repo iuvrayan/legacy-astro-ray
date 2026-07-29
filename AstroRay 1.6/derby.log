@@ -1,0 +1,8 @@
+----------------------------------------------------------------
+Wed Jul 06 20:45:04 IST 2011:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.7.1.1 - (1040133): instance a816c00e-0131-0004-3e93-000000b45698 
+on database directory C:\Documents and Settings\Family\My Documents\My Files\AstroRay 1.5\geo  with class loader sun.misc.Launcher$AppClassLoader@11b86e7 
+Loaded from file:/C:/Documents%20and%20Settings/Family/My%20Documents/My%20Files/AstroRay%201.5/lib/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_24-b07
+Database Class Loader started - derby.database.classpath=''
