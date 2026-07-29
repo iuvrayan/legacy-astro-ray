@@ -58,7 +58,7 @@ public class FrmBirthData extends javax.swing.JFrame {
 
         //Initialize Latitude & Longitude
         txfLatitude.setText("00:00:00:N");
-        txfLongitude.setText("00:00:00:E");
+        txfLongitude.setText("000:00:00:E");
 
         //Set Default Time Zone to India
         chkTimeZone.setSelected(false);
@@ -255,7 +255,7 @@ public class FrmBirthData extends javax.swing.JFrame {
         });
 
         lblLongitude.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblLongitude.setText("Longitude (DD:MM:SS:E|W)");
+        lblLongitude.setText("Longitude (DDD:MM:SS:E|W)");
         lblLongitude.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         lblLongitude.setPreferredSize(new java.awt.Dimension(60, 15));
 
@@ -267,7 +267,7 @@ public class FrmBirthData extends javax.swing.JFrame {
         lblLatitude.setPreferredSize(new java.awt.Dimension(60, 15));
 
         try {
-            txfLongitude.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##:##:U")));
+            txfLongitude.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###:##:##:U")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -633,7 +633,7 @@ public class FrmBirthData extends javax.swing.JFrame {
 
     private void clearLatitudeAndLogitude() {
         txfLatitude.setText("00:00:00:N");
-        txfLongitude.setText("00:00:00:E");
+        txfLongitude.setText("000:00:00:E");
     }
 
     private void setLatitudeAndLogitude(String location) {

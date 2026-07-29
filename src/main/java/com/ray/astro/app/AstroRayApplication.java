@@ -382,6 +382,7 @@ public class AstroRayApplication {
         Planet moon = arrPlanets[1];
 
         DecimalFormat format4d = new DecimalFormat("0000");
+        DecimalFormat format3d = new DecimalFormat("000");
         DecimalFormat format2d = new DecimalFormat("00");
 
         StringBuffer sb = new StringBuffer();
@@ -475,7 +476,7 @@ public class AstroRayApplication {
         sb.append('\n');
 
         sb.append("LONGITUDE      : ");
-        sb.append(format2d.format(birthData.getLongitudeDegrees()));
+        sb.append(format3d.format(birthData.getLongitudeDegrees()));
         sb.append(':');
         sb.append(format2d.format(birthData.getLongitudeMinutes()));
         sb.append(':');

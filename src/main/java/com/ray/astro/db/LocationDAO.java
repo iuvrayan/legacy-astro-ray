@@ -182,6 +182,25 @@ public class LocationDAO {
                 latitudeAndLongitue = new String[2];
                 latitudeAndLongitue[0] = rs.getString(1);
                 latitudeAndLongitue[1] = rs.getString(2);
+                
+                // Format latitude to ensure 2 digits for degrees, minutes, and seconds
+                String[] parts = latitudeAndLongitue[0].split(":");
+                latitudeAndLongitue[0] = String.format("%02d:%02d:%02d:%s", 
+                    Integer.parseInt(parts[0]), 
+                    Integer.parseInt(parts[1]), 
+                    Integer.parseInt(parts[2]), 
+                    parts[3]
+                );
+                
+                // Format longitude to ensure 3 digits for degrees and 2 digits for minutes, and seconds
+                parts = latitudeAndLongitue[1].split(":");
+                latitudeAndLongitue[1] = String.format("%03d:%02d:%02d:%s", 
+                    Integer.parseInt(parts[0]), 
+                    Integer.parseInt(parts[1]), 
+                    Integer.parseInt(parts[2]), 
+                    parts[3]
+                );
+                
             }
 
             return latitudeAndLongitue;

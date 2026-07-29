@@ -50,12 +50,12 @@ public class DlgLocation extends javax.swing.JDialog {
     private void clearTextFields() {
         txtLocation.setText("");
         txfLatitude.setText("00:00:00:N");
-        txfLongitude.setText("00:00:00:E");
+        txfLongitude.setText("000:00:00:E");
     }
 
     private void clearLatitudeAndLongitude() {
         txfLatitude.setText("00:00:00:N");
-        txfLongitude.setText("00:00:00:E");
+        txfLongitude.setText("000:00:00:E");
     }
 
     /** This method is called from within the constructor to
@@ -172,7 +172,7 @@ public class DlgLocation extends javax.swing.JDialog {
         });
 
         lblLongitude.setFont(new java.awt.Font("Tahoma", 0, 12));
-        lblLongitude.setText("Longitude (DD:MM:SS:E|W)");
+        lblLongitude.setText("Longitude (DDD:MM:SS:E|W)");
         lblLongitude.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         lblLongitude.setPreferredSize(new java.awt.Dimension(60, 15));
 
@@ -184,7 +184,7 @@ public class DlgLocation extends javax.swing.JDialog {
         lblLatitude.setPreferredSize(new java.awt.Dimension(60, 15));
 
         try {
-            txfLongitude.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##:##:U")));
+            txfLongitude.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###:##:##:U")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
@@ -366,7 +366,7 @@ public class DlgLocation extends javax.swing.JDialog {
             String location = txtLocation.getText().trim().toUpperCase();
             String latitude = txfLatitude.getText();
             String longitude = txfLongitude.getText();
-            if (!location.equals("") && !latitude.startsWith("00:00:00") && !longitude.startsWith("00:00:00")) {
+            if (!location.equals("") && !latitude.startsWith("00:00:00") && !longitude.startsWith("000:00:00")) {
                 locationDAO.addLocation(location, latitude, longitude);
                 JOptionPane.showMessageDialog(this, "Location " + location + " got added successfully");
                 DefaultListModel model = (DefaultListModel) lstLocations.getModel();
@@ -416,7 +416,7 @@ public class DlgLocation extends javax.swing.JDialog {
         String location = txtLocation.getText().trim().toUpperCase();
         String latitude = txfLatitude.getText();
         String longitude = txfLongitude.getText();
-        if (!location.equals("") && !latitude.startsWith("00:00:00") && !longitude.startsWith("00:00:00")) {
+        if (!location.equals("") && !latitude.startsWith("00:00:00") && !longitude.startsWith("000:00:00")) {
             ((FrmBirthData) this.getParent()).setLocLatLon(location, latitude, longitude);
             this.setVisible(false);
             this.dispose();
@@ -433,7 +433,7 @@ public class DlgLocation extends javax.swing.JDialog {
             String latitude = txfLatitude.getText();
             String longitude = txfLongitude.getText();
 
-            if (!newLocation.equals("") && !latitude.startsWith("00:00:00") && !longitude.startsWith("00:00:00")) {
+            if (!newLocation.equals("") && !latitude.startsWith("00:00:00") && !longitude.startsWith("000:00:00")) {
 
                 if (newLocation.equals(currentLocation) && latitude.equals(currentLatitude) && longitude.equals(currentLongitude)) {
                     JOptionPane.showMessageDialog(this, "No Modifications found");
