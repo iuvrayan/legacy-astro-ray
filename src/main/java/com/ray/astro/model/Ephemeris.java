@@ -33,7 +33,7 @@ public class Ephemeris {
         swissEph.swe_set_sid_mode(SweConst.SE_SIDM_LAHIRI, 0.0, 0.0);
 
         //Set the latitude and logitude to calculate topgographic longitudes
-        swissEph.swe_set_topo(latitude, longitude, 0.0);
+        swissEph.swe_set_topo(longitude, latitude, 0.0);
 
         //Convert hours, day, month and year to JulianDay (JD) Number
         sweDate = new SweDate();
